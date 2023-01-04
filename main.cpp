@@ -1,52 +1,31 @@
-#include "DLL.H"
-
+#include "CSLL.h"
 int main()
 {
-    List D;
-    createList_1301213072(D);
+    playlistLagu Q;
+    createPlaylist_1301213072(Q);
 
-    insertAscending_1301213072(D, 25);
-    printList_1301213072(D);
+    int N = 7;
+    infotype Lagu;
+    adr P;
 
-    insertAscending_1301213072(D, 10);
-    printList_1301213072(D);
 
-    insertAscending_1301213072(D, 10);
-    printList_1301213072(D);
+    for (int i = 1; i <= N; i++){
+        cout << "Artis : ";
+        cin >> Lagu.Artis;
+        cout << "Judul : ";
+        cin >> Lagu.Judul;
+        cout << endl;
 
-    insertAscending_1301213072(D, 25);
-    printList_1301213072(D);
+        newElement_1301213072(Lagu, P);
+        enqueue_1301213072(Q, P);
+    }
+    cout << "============ Menampilkan List ===========" << endl;
+    showSemuaLagu_1301213072(Q);
 
-    insertAscending_1301213072(D, 25);
-    printList_1301213072(D);
+    dequeue_1301213072(Q, P);
 
-    insertAscending_1301213072(D, 25);
-    printList_1301213072(D);
+    cout << "============ Menampilkan List yang telah dihapus ==============" << endl;
+    showSemuaLagu_1301213072(Q);
 
-    insertAscending_1301213072(D, 15);
-    printList_1301213072(D);
-
-    deleteElm_1301213072(D, 25);
-    printList_1301213072(D);
-
-    deleteElm_1301213072(D, 15);
-    printList_1301213072(D);
-
-    deleteElm_1301213072(D, 10);
-    printList_1301213072(D);
-
-    cout << endl << "====================" << endl << endl;
-
-    bool F = findElement_1301213072(D, 10);
-    cout << "Find 10 : " << F << endl;
-
-    int O = frequencyOfElm_1301213072(D, 10);
-    cout << "Frequency 10 : " <<  O << endl;
-
-    O = frequencyOfElm_1301213072(D, 25);
-    cout << "Frequency 25 : " <<  O << endl;
-
-    O = frequencyOfElm_1301213072(D, 2);
-    cout << "Frequency 2 : " <<  O << endl;
     return 0;
 }
